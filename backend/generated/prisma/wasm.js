@@ -175,6 +175,7 @@ exports.Prisma.ComplaintCataegoryScalarFieldEnum = {
 };
 
 exports.Prisma.ResolvedComplaintsScalarFieldEnum = {
+  resolved_id: 'resolved_id',
   resolved_details: 'resolved_details',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
@@ -185,6 +186,7 @@ exports.Prisma.ResolvedComplaintsScalarFieldEnum = {
 };
 
 exports.Prisma.NotificationsScalarFieldEnum = {
+  notification_id: 'notification_id',
   complaint_id: 'complaint_id',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',

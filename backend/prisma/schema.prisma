@@ -107,6 +107,7 @@ model ComplaintCataegory {
 }
 
 model ResolvedComplaints {
+  resolved_id      Int      @id @default(autoincrement()) // Added PK
   resolved_details String   @db.Text
   createdAt        DateTime @default(now())
   updatedAt        DateTime @default(now())
@@ -122,12 +123,13 @@ model ResolvedComplaints {
 }
 
 model Notifications {
+  notification_id  Int                @id @default(autoincrement()) // Added PK
   ResolveComplaint ResolvedComplaints @relation(fields: [complaint_id], references: [complaint_id])
   complaint_id     Int                @unique
   createdAt        DateTime           @default(now())
   updatedAt        DateTime           @default(now()) @updatedAt
 
-  seen Boolean @default(false)
+  seen Boolean
   User User?   @relation(fields: [uid], references: [uid])
   uid  String
 }

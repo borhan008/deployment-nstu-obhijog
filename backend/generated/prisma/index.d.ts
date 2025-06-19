@@ -8869,16 +8869,19 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsAvgAggregateOutputType = {
+    resolved_id: number | null
     employee_id: number | null
     complaint_id: number | null
   }
 
   export type ResolvedComplaintsSumAggregateOutputType = {
+    resolved_id: number | null
     employee_id: number | null
     complaint_id: number | null
   }
 
   export type ResolvedComplaintsMinAggregateOutputType = {
+    resolved_id: number | null
     resolved_details: string | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -8889,6 +8892,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsMaxAggregateOutputType = {
+    resolved_id: number | null
     resolved_details: string | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -8899,6 +8903,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsCountAggregateOutputType = {
+    resolved_id: number
     resolved_details: number
     createdAt: number
     updatedAt: number
@@ -8911,16 +8916,19 @@ export namespace Prisma {
 
 
   export type ResolvedComplaintsAvgAggregateInputType = {
+    resolved_id?: true
     employee_id?: true
     complaint_id?: true
   }
 
   export type ResolvedComplaintsSumAggregateInputType = {
+    resolved_id?: true
     employee_id?: true
     complaint_id?: true
   }
 
   export type ResolvedComplaintsMinAggregateInputType = {
+    resolved_id?: true
     resolved_details?: true
     createdAt?: true
     updatedAt?: true
@@ -8931,6 +8939,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsMaxAggregateInputType = {
+    resolved_id?: true
     resolved_details?: true
     createdAt?: true
     updatedAt?: true
@@ -8941,6 +8950,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsCountAggregateInputType = {
+    resolved_id?: true
     resolved_details?: true
     createdAt?: true
     updatedAt?: true
@@ -9038,6 +9048,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsGroupByOutputType = {
+    resolved_id: number
     resolved_details: string
     createdAt: Date
     updatedAt: Date
@@ -9067,6 +9078,7 @@ export namespace Prisma {
 
 
   export type ResolvedComplaintsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    resolved_id?: boolean
     resolved_details?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -9083,6 +9095,7 @@ export namespace Prisma {
 
 
   export type ResolvedComplaintsSelectScalar = {
+    resolved_id?: boolean
     resolved_details?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -9092,7 +9105,7 @@ export namespace Prisma {
     resolved_by?: boolean
   }
 
-  export type ResolvedComplaintsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"resolved_details" | "createdAt" | "updatedAt" | "employee_id" | "estimated_date" | "complaint_id" | "resolved_by", ExtArgs["result"]["resolvedComplaints"]>
+  export type ResolvedComplaintsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"resolved_id" | "resolved_details" | "createdAt" | "updatedAt" | "employee_id" | "estimated_date" | "complaint_id" | "resolved_by", ExtArgs["result"]["resolvedComplaints"]>
   export type ResolvedComplaintsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Employee?: boolean | ResolvedComplaints$EmployeeArgs<ExtArgs>
     Complaints?: boolean | ResolvedComplaints$ComplaintsArgs<ExtArgs>
@@ -9109,6 +9122,7 @@ export namespace Prisma {
       Notifications: Prisma.$NotificationsPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
+      resolved_id: number
       resolved_details: string
       createdAt: Date
       updatedAt: Date
@@ -9199,8 +9213,8 @@ export namespace Prisma {
      * // Get first 10 ResolvedComplaints
      * const resolvedComplaints = await prisma.resolvedComplaints.findMany({ take: 10 })
      * 
-     * // Only select the `resolved_details`
-     * const resolvedComplaintsWithResolved_detailsOnly = await prisma.resolvedComplaints.findMany({ select: { resolved_details: true } })
+     * // Only select the `resolved_id`
+     * const resolvedComplaintsWithResolved_idOnly = await prisma.resolvedComplaints.findMany({ select: { resolved_id: true } })
      * 
      */
     findMany<T extends ResolvedComplaintsFindManyArgs>(args?: SelectSubset<T, ResolvedComplaintsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResolvedComplaintsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
@@ -9489,6 +9503,7 @@ export namespace Prisma {
    * Fields of the ResolvedComplaints model
    */
   interface ResolvedComplaintsFieldRefs {
+    readonly resolved_id: FieldRef<"ResolvedComplaints", 'Int'>
     readonly resolved_details: FieldRef<"ResolvedComplaints", 'String'>
     readonly createdAt: FieldRef<"ResolvedComplaints", 'DateTime'>
     readonly updatedAt: FieldRef<"ResolvedComplaints", 'DateTime'>
@@ -9946,14 +9961,17 @@ export namespace Prisma {
   }
 
   export type NotificationsAvgAggregateOutputType = {
+    notification_id: number | null
     complaint_id: number | null
   }
 
   export type NotificationsSumAggregateOutputType = {
+    notification_id: number | null
     complaint_id: number | null
   }
 
   export type NotificationsMinAggregateOutputType = {
+    notification_id: number | null
     complaint_id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -9962,6 +9980,7 @@ export namespace Prisma {
   }
 
   export type NotificationsMaxAggregateOutputType = {
+    notification_id: number | null
     complaint_id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -9970,6 +9989,7 @@ export namespace Prisma {
   }
 
   export type NotificationsCountAggregateOutputType = {
+    notification_id: number
     complaint_id: number
     createdAt: number
     updatedAt: number
@@ -9980,14 +10000,17 @@ export namespace Prisma {
 
 
   export type NotificationsAvgAggregateInputType = {
+    notification_id?: true
     complaint_id?: true
   }
 
   export type NotificationsSumAggregateInputType = {
+    notification_id?: true
     complaint_id?: true
   }
 
   export type NotificationsMinAggregateInputType = {
+    notification_id?: true
     complaint_id?: true
     createdAt?: true
     updatedAt?: true
@@ -9996,6 +10019,7 @@ export namespace Prisma {
   }
 
   export type NotificationsMaxAggregateInputType = {
+    notification_id?: true
     complaint_id?: true
     createdAt?: true
     updatedAt?: true
@@ -10004,6 +10028,7 @@ export namespace Prisma {
   }
 
   export type NotificationsCountAggregateInputType = {
+    notification_id?: true
     complaint_id?: true
     createdAt?: true
     updatedAt?: true
@@ -10099,6 +10124,7 @@ export namespace Prisma {
   }
 
   export type NotificationsGroupByOutputType = {
+    notification_id: number
     complaint_id: number
     createdAt: Date
     updatedAt: Date
@@ -10126,6 +10152,7 @@ export namespace Prisma {
 
 
   export type NotificationsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    notification_id?: boolean
     complaint_id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -10138,6 +10165,7 @@ export namespace Prisma {
 
 
   export type NotificationsSelectScalar = {
+    notification_id?: boolean
     complaint_id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -10145,7 +10173,7 @@ export namespace Prisma {
     uid?: boolean
   }
 
-  export type NotificationsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"complaint_id" | "createdAt" | "updatedAt" | "seen" | "uid", ExtArgs["result"]["notifications"]>
+  export type NotificationsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"notification_id" | "complaint_id" | "createdAt" | "updatedAt" | "seen" | "uid", ExtArgs["result"]["notifications"]>
   export type NotificationsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     ResolveComplaint?: boolean | ResolvedComplaintsDefaultArgs<ExtArgs>
     User?: boolean | Notifications$UserArgs<ExtArgs>
@@ -10158,6 +10186,7 @@ export namespace Prisma {
       User: Prisma.$UserPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
+      notification_id: number
       complaint_id: number
       createdAt: Date
       updatedAt: Date
@@ -10246,8 +10275,8 @@ export namespace Prisma {
      * // Get first 10 Notifications
      * const notifications = await prisma.notifications.findMany({ take: 10 })
      * 
-     * // Only select the `complaint_id`
-     * const notificationsWithComplaint_idOnly = await prisma.notifications.findMany({ select: { complaint_id: true } })
+     * // Only select the `notification_id`
+     * const notificationsWithNotification_idOnly = await prisma.notifications.findMany({ select: { notification_id: true } })
      * 
      */
     findMany<T extends NotificationsFindManyArgs>(args?: SelectSubset<T, NotificationsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NotificationsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
@@ -10534,6 +10563,7 @@ export namespace Prisma {
    * Fields of the Notifications model
    */
   interface NotificationsFieldRefs {
+    readonly notification_id: FieldRef<"Notifications", 'Int'>
     readonly complaint_id: FieldRef<"Notifications", 'Int'>
     readonly createdAt: FieldRef<"Notifications", 'DateTime'>
     readonly updatedAt: FieldRef<"Notifications", 'DateTime'>
@@ -11012,6 +11042,7 @@ export namespace Prisma {
 
 
   export const ResolvedComplaintsScalarFieldEnum: {
+    resolved_id: 'resolved_id',
     resolved_details: 'resolved_details',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
@@ -11025,6 +11056,7 @@ export namespace Prisma {
 
 
   export const NotificationsScalarFieldEnum: {
+    notification_id: 'notification_id',
     complaint_id: 'complaint_id',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
@@ -11624,6 +11656,7 @@ export namespace Prisma {
     AND?: ResolvedComplaintsWhereInput | ResolvedComplaintsWhereInput[]
     OR?: ResolvedComplaintsWhereInput[]
     NOT?: ResolvedComplaintsWhereInput | ResolvedComplaintsWhereInput[]
+    resolved_id?: IntFilter<"ResolvedComplaints"> | number
     resolved_details?: StringFilter<"ResolvedComplaints"> | string
     createdAt?: DateTimeFilter<"ResolvedComplaints"> | Date | string
     updatedAt?: DateTimeFilter<"ResolvedComplaints"> | Date | string
@@ -11638,6 +11671,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsOrderByWithRelationInput = {
+    resolved_id?: SortOrder
     resolved_details?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -11653,6 +11687,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsWhereUniqueInput = Prisma.AtLeast<{
+    resolved_id?: number
     complaint_id?: number
     AND?: ResolvedComplaintsWhereInput | ResolvedComplaintsWhereInput[]
     OR?: ResolvedComplaintsWhereInput[]
@@ -11667,9 +11702,10 @@ export namespace Prisma {
     Complaints?: XOR<ComplaintsNullableScalarRelationFilter, ComplaintsWhereInput> | null
     User?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
     Notifications?: XOR<NotificationsNullableScalarRelationFilter, NotificationsWhereInput> | null
-  }, "complaint_id">
+  }, "resolved_id" | "complaint_id">
 
   export type ResolvedComplaintsOrderByWithAggregationInput = {
+    resolved_id?: SortOrder
     resolved_details?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -11688,6 +11724,7 @@ export namespace Prisma {
     AND?: ResolvedComplaintsScalarWhereWithAggregatesInput | ResolvedComplaintsScalarWhereWithAggregatesInput[]
     OR?: ResolvedComplaintsScalarWhereWithAggregatesInput[]
     NOT?: ResolvedComplaintsScalarWhereWithAggregatesInput | ResolvedComplaintsScalarWhereWithAggregatesInput[]
+    resolved_id?: IntWithAggregatesFilter<"ResolvedComplaints"> | number
     resolved_details?: StringWithAggregatesFilter<"ResolvedComplaints"> | string
     createdAt?: DateTimeWithAggregatesFilter<"ResolvedComplaints"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"ResolvedComplaints"> | Date | string
@@ -11701,6 +11738,7 @@ export namespace Prisma {
     AND?: NotificationsWhereInput | NotificationsWhereInput[]
     OR?: NotificationsWhereInput[]
     NOT?: NotificationsWhereInput | NotificationsWhereInput[]
+    notification_id?: IntFilter<"Notifications"> | number
     complaint_id?: IntFilter<"Notifications"> | number
     createdAt?: DateTimeFilter<"Notifications"> | Date | string
     updatedAt?: DateTimeFilter<"Notifications"> | Date | string
@@ -11711,6 +11749,7 @@ export namespace Prisma {
   }
 
   export type NotificationsOrderByWithRelationInput = {
+    notification_id?: SortOrder
     complaint_id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -11722,6 +11761,7 @@ export namespace Prisma {
   }
 
   export type NotificationsWhereUniqueInput = Prisma.AtLeast<{
+    notification_id?: number
     complaint_id?: number
     AND?: NotificationsWhereInput | NotificationsWhereInput[]
     OR?: NotificationsWhereInput[]
@@ -11732,9 +11772,10 @@ export namespace Prisma {
     uid?: StringFilter<"Notifications"> | string
     ResolveComplaint?: XOR<ResolvedComplaintsScalarRelationFilter, ResolvedComplaintsWhereInput>
     User?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
-  }, "complaint_id">
+  }, "notification_id" | "complaint_id">
 
   export type NotificationsOrderByWithAggregationInput = {
+    notification_id?: SortOrder
     complaint_id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -11751,6 +11792,7 @@ export namespace Prisma {
     AND?: NotificationsScalarWhereWithAggregatesInput | NotificationsScalarWhereWithAggregatesInput[]
     OR?: NotificationsScalarWhereWithAggregatesInput[]
     NOT?: NotificationsScalarWhereWithAggregatesInput | NotificationsScalarWhereWithAggregatesInput[]
+    notification_id?: IntWithAggregatesFilter<"Notifications"> | number
     complaint_id?: IntWithAggregatesFilter<"Notifications"> | number
     createdAt?: DateTimeWithAggregatesFilter<"Notifications"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Notifications"> | Date | string
@@ -12188,6 +12230,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedCreateInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -12210,6 +12253,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -12221,6 +12265,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsCreateManyInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -12238,6 +12283,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateManyInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -12250,16 +12296,17 @@ export namespace Prisma {
   export type NotificationsCreateInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
     ResolveComplaint: ResolvedComplaintsCreateNestedOneWithoutNotificationsInput
     User?: UserCreateNestedOneWithoutNotificationsInput
   }
 
   export type NotificationsUncheckedCreateInput = {
+    notification_id?: number
     complaint_id: number
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
     uid: string
   }
 
@@ -12272,6 +12319,7 @@ export namespace Prisma {
   }
 
   export type NotificationsUncheckedUpdateInput = {
+    notification_id?: IntFieldUpdateOperationsInput | number
     complaint_id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -12280,10 +12328,11 @@ export namespace Prisma {
   }
 
   export type NotificationsCreateManyInput = {
+    notification_id?: number
     complaint_id: number
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
     uid: string
   }
 
@@ -12294,6 +12343,7 @@ export namespace Prisma {
   }
 
   export type NotificationsUncheckedUpdateManyInput = {
+    notification_id?: IntFieldUpdateOperationsInput | number
     complaint_id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -12883,6 +12933,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsCountOrderByAggregateInput = {
+    resolved_id?: SortOrder
     resolved_details?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -12893,11 +12944,13 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsAvgOrderByAggregateInput = {
+    resolved_id?: SortOrder
     employee_id?: SortOrder
     complaint_id?: SortOrder
   }
 
   export type ResolvedComplaintsMaxOrderByAggregateInput = {
+    resolved_id?: SortOrder
     resolved_details?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -12908,6 +12961,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsMinOrderByAggregateInput = {
+    resolved_id?: SortOrder
     resolved_details?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -12918,6 +12972,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsSumOrderByAggregateInput = {
+    resolved_id?: SortOrder
     employee_id?: SortOrder
     complaint_id?: SortOrder
   }
@@ -12948,6 +13003,7 @@ export namespace Prisma {
   }
 
   export type NotificationsCountOrderByAggregateInput = {
+    notification_id?: SortOrder
     complaint_id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -12956,10 +13012,12 @@ export namespace Prisma {
   }
 
   export type NotificationsAvgOrderByAggregateInput = {
+    notification_id?: SortOrder
     complaint_id?: SortOrder
   }
 
   export type NotificationsMaxOrderByAggregateInput = {
+    notification_id?: SortOrder
     complaint_id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -12968,6 +13026,7 @@ export namespace Prisma {
   }
 
   export type NotificationsMinOrderByAggregateInput = {
+    notification_id?: SortOrder
     complaint_id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -12976,6 +13035,7 @@ export namespace Prisma {
   }
 
   export type NotificationsSumOrderByAggregateInput = {
+    notification_id?: SortOrder
     complaint_id?: SortOrder
   }
 
@@ -13959,6 +14019,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedCreateWithoutUserInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -13981,15 +14042,16 @@ export namespace Prisma {
   export type NotificationsCreateWithoutUserInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
     ResolveComplaint: ResolvedComplaintsCreateNestedOneWithoutNotificationsInput
   }
 
   export type NotificationsUncheckedCreateWithoutUserInput = {
+    notification_id?: number
     complaint_id: number
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
   }
 
   export type NotificationsCreateOrConnectWithoutUserInput = {
@@ -14098,6 +14160,7 @@ export namespace Prisma {
     AND?: ResolvedComplaintsScalarWhereInput | ResolvedComplaintsScalarWhereInput[]
     OR?: ResolvedComplaintsScalarWhereInput[]
     NOT?: ResolvedComplaintsScalarWhereInput | ResolvedComplaintsScalarWhereInput[]
+    resolved_id?: IntFilter<"ResolvedComplaints"> | number
     resolved_details?: StringFilter<"ResolvedComplaints"> | string
     createdAt?: DateTimeFilter<"ResolvedComplaints"> | Date | string
     updatedAt?: DateTimeFilter<"ResolvedComplaints"> | Date | string
@@ -14127,6 +14190,7 @@ export namespace Prisma {
     AND?: NotificationsScalarWhereInput | NotificationsScalarWhereInput[]
     OR?: NotificationsScalarWhereInput[]
     NOT?: NotificationsScalarWhereInput | NotificationsScalarWhereInput[]
+    notification_id?: IntFilter<"Notifications"> | number
     complaint_id?: IntFilter<"Notifications"> | number
     createdAt?: DateTimeFilter<"Notifications"> | Date | string
     updatedAt?: DateTimeFilter<"Notifications"> | Date | string
@@ -14239,6 +14303,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedCreateWithoutEmployeeInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -14422,6 +14487,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedCreateWithoutComplaintsInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -14805,14 +14871,15 @@ export namespace Prisma {
   export type NotificationsCreateWithoutResolveComplaintInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
     User?: UserCreateNestedOneWithoutNotificationsInput
   }
 
   export type NotificationsUncheckedCreateWithoutResolveComplaintInput = {
+    notification_id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
     uid: string
   }
 
@@ -14947,6 +15014,7 @@ export namespace Prisma {
   }
 
   export type NotificationsUncheckedUpdateWithoutResolveComplaintInput = {
+    notification_id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     seen?: BoolFieldUpdateOperationsInput | boolean
@@ -14964,6 +15032,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedCreateWithoutNotificationsInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -15039,6 +15108,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateWithoutNotificationsInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15107,6 +15177,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsCreateManyUserInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -15116,10 +15187,11 @@ export namespace Prisma {
   }
 
   export type NotificationsCreateManyUserInput = {
+    notification_id?: number
     complaint_id: number
     createdAt?: Date | string
     updatedAt?: Date | string
-    seen?: boolean
+    seen: boolean
   }
 
   export type ComplaintsUpdateWithoutUserInput = {
@@ -15173,6 +15245,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateWithoutUserInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15183,6 +15256,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateManyWithoutUserInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15199,6 +15273,7 @@ export namespace Prisma {
   }
 
   export type NotificationsUncheckedUpdateWithoutUserInput = {
+    notification_id?: IntFieldUpdateOperationsInput | number
     complaint_id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15206,6 +15281,7 @@ export namespace Prisma {
   }
 
   export type NotificationsUncheckedUpdateManyWithoutUserInput = {
+    notification_id?: IntFieldUpdateOperationsInput | number
     complaint_id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15275,6 +15351,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsCreateManyEmployeeInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -15294,6 +15371,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateWithoutEmployeeInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15304,6 +15382,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateManyWithoutEmployeeInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15375,6 +15454,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsCreateManyComplaintsInput = {
+    resolved_id?: number
     resolved_details: string
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -15394,6 +15474,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateWithoutComplaintsInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -15404,6 +15485,7 @@ export namespace Prisma {
   }
 
   export type ResolvedComplaintsUncheckedUpdateManyWithoutComplaintsInput = {
+    resolved_id?: IntFieldUpdateOperationsInput | number
     resolved_details?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
