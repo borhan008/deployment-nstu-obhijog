@@ -255,7 +255,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "F:\\Projects\\ovijog\\backend\\generated\\prisma",
+      "value": "F:\\obhijog-deployment\\backend\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -269,7 +269,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "F:\\Projects\\ovijog\\backend\\prisma\\schema.prisma",
+    "sourceFilePath": "F:\\obhijog-deployment\\backend\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

@@ -46,6 +46,7 @@ exports.createUser = async (req, res) => {
           department_id,
           profession_id,
           roll,
+          role: "ADMIN",
         },
       });
     } else {
