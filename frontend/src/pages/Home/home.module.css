@@ -1,0 +1,15 @@
+.home_area{
+    background-image: url('/images/banner.png');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.home_heading{
+    background: #12127b;
+    background: linear-gradient(to right, #12127b , #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+}

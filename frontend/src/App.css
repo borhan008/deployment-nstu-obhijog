@@ -1,0 +1,5 @@
+@layer base {
+    button, [role="button"] {
+      cursor: pointer;
+    }
+  }
