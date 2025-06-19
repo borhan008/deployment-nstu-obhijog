@@ -3,6 +3,7 @@ const { getUserDetails } = require("../Quries/user");
 
 const authMiddleware = async (req, res, next) => {
   const token = req.headers.authorization?.split("Bearer ")[1];
+
   if (!token) {
     console.log(req.headers.authorization);
     return res.status(401).json({
@@ -13,6 +14,7 @@ const authMiddleware = async (req, res, next) => {
   try {
     const decodeToken = await admin.auth().verifyIdToken(token);
     req.user = decodeToken;
+    console.log(decodeToken);
     const userDetails = await getUserDetails({ uid: decodeToken.uid });
     if (userDetails?.block) {
       return res.status(401).json({

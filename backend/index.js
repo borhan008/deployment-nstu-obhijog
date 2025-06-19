@@ -19,6 +19,7 @@ app.use(
       "https://deployment-nstu-obhijog-toeh-git-main-sagors-projects-ba38280f.vercel.app",
       "https://deployment-nstu-obhijog-ju4brycg1-sagors-projects-ba38280f.vercel.app",
       "http://localhost:3000",
+      "http://localhost:5173",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
