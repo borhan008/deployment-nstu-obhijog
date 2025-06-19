@@ -165,22 +165,29 @@ export default function Profile() {
         <div className="lg:flex gap-4">
           <div className="mb-4 space-y-1 w-full">
             <Label>Profession</Label>
-
-            <Select
-              value={userProfession}
-              onValueChange={(val) => setUserProfession(String(val))}
-            >
-              <SelectTrigger className="w-full capitalize" disabled={isStudent}>
-                <SelectValue placeholder="Profession" />
-              </SelectTrigger>
-              <SelectContent>
-                {professions.map((prof) => (
-                  <SelectItem value={String(prof.profession_id)}>
-                    {prof.profession_name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            {professions.length > 0 && (
+              <Select
+                value={String(userProfession)}
+                onValueChange={(val) => setUserProfession(String(val))}
+              >
+                <SelectTrigger
+                  className="w-full capitalize"
+                  disabled={isStudent}
+                >
+                  <SelectValue placeholder="Profession" />
+                </SelectTrigger>
+                <SelectContent>
+                  {professions.map((prof) => (
+                    <SelectItem
+                      key={prof.profession_id}
+                      value={String(prof.profession_id)}
+                    >
+                      {prof.profession_name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            )}
           </div>
 
           {isStudent && (
